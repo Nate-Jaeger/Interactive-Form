@@ -8,6 +8,8 @@ nameInput.focus();
 
 //Hide the 'other-title' input until the 'other' option is selected
 $otherTitle.hide();
-if($('#title').children("option:selected").val() === "other"){
-    $otherTitle.show();
-}
+$("#title").change((e) => {
+    if(e.target.value === "other"){
+        $otherTitle.show();
+    }
+});
